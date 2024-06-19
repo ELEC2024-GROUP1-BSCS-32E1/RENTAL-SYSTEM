@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Rental Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Equipments</a></li>
+          <li><a href="#"><img src="user-icon.png" alt="User Icon"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="login-container">
+    <h1>SIGN IN</h1>
+    <form id="login-form">
+      <label for="email">EMAIL</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <label for="password">PASSWORD</label>
+      <input type="password" id="password" name="password" placeholder="Your Password" required>
+      <div class="checkbox-container">
+        <label for="remember-me">
+          <input type="checkbox" id="remember-me" name="remember-me"> REMEMBER ME
+        </label>
+        <label for="show-password">
+          <input type="checkbox" id="show-password" name="show-password"> SHOW PASSWORD
+        </label>
+      </div>
+      <button type="submit">Sign In</button>
+      <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

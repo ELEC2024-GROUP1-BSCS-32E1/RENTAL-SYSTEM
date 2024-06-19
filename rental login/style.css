@@ -1,0 +1,133 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('background.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+header {
+  background-color: #003366;
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+header nav ul li a.hover {
+  background-color: #ffcc00;
+  color: #003366;
+  border-radius: 5px;
+}
+
+header nav ul li a:hover {
+  background-color: #ffcc00;
+  border-radius: 5px;
+  color: #003366;
+}
+
+header nav ul li img {
+  height: 21px;
+  vertical-align: middle;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  margin: auto;
+  margin-top: 150px; 
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #002244;
+}
+
+p {
+  margin-top: 20px;
+}
+
+p a {
+  color: #003366;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
