@@ -1,0 +1,222 @@
+/* /css/styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #111;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+}
+
+.navbar-item {
+    padding: 0.5rem 0;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar-link:hover {
+    background-color: #444;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #111;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 0;
+    }
+
+    .navbar-item {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+}
+
+/* Home Page Styles */
+.hero {
+    background: url('hero-bg.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.button-primary {
+    background-color: #FF6347;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button-primary:hover {
+    background-color: #E55340;
+}
+
+/* Featured Properties */
+.featured-properties {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.featured-properties h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.properties-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.property-card {
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: left;
+}
+
+.property-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.property-card h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #fff;
+}
+
+.property-card p {
+    color: #ccc;
+}
+
+.property-card .price {
+    color: #FF6347;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: block;
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.hero {
+    background-color: #222;
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, p {
+    margin-bottom: 2rem;
+}
