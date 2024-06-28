@@ -1,47 +1,13 @@
-<?php
-session_start();  // Start session to persist login status
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    require_once "db.php";  // Include database connection script
-
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // SQL injection prevention
-    $username = mysqli_real_escape_string($conn, $username);
-    $password = mysqli_real_escape_string($conn, $password);
-
-    // Check if username already exists
-    $check_username = "SELECT UserID FROM userrental WHERE Username='$username'";
-    $result = $conn->query($check_username);
-
-    if ($result->num_rows > 0) {
-        $error = "Username already exists";
-    } else {
-        // Insert new user into database
-        $insert_user = "INSERT INTO userrental (Username, Password) VALUES ('$username', '$password')";
-        if ($conn->query($insert_user) === TRUE) {
-            $_SESSION['loggedin'] = true;
-            $_SESSION['username'] = $username;
-            $_SESSION['userid'] = $conn->insert_id;  // Get the ID of the newly inserted user
-
-            header("Location: ../php/login.php");  // Redirect to home page after registration
-            exit();
-        } else {
-            $error = "Error registering user: " . $conn->error;
-        }
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="../css/style.css">  <!-- Adjust path as needed -->
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/register.css"> <!-- Adjust path as needed -->
+    <script defer src="../js/register.js"></script> <!-- Add this line -->
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -117,13 +83,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background-color: #E55340;
         }
     </style>
+
+
 </head>
 <body>
-
     <div class="main-content">
         <div class="form-container">
             <h1>Register</h1>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <form id="register-form" action="javascript:void(0);" method="post"> <!-- Modify this line -->
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required>
@@ -133,11 +100,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="password" id="password" name="password" required>
                 </div>
                 <button type="submit" class="submit-btn">Register</button>
-                <?php if (isset($error)) { echo '<p style="color: #ff6347; margin-top: 1rem;">' . $error . '</p>'; } ?>
+                <p id="error-msg" style="color: #ff6347; margin-top: 1rem;"></p> <!-- Add this line -->
             </form>
             <p style="margin-top: 1rem;">Already have an account? <a href="../php/login.php" style="color: #ff6347;">Login here</a></p>
         </div>
     </div>
-
 </body>
 </html>
