@@ -1,0 +1,34 @@
+﻿@* Views/Listings/Index.cshtml *@
+@model List<rental.Models.Equipment>
+
+@{
+    ViewData["Title"] = "RentEasy - Listings";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/navbar.css" />
+    <link rel="stylesheet" href="~/css/listings.css" />
+</head>
+
+<body>
+    <div class="main-content">
+        <section class="listings">
+            <h1>Available Equipment</h1>
+
+            <div class="listing-grid">
+                @foreach (var equipment in Model)
+                {
+                    <div class="listing-card">
+                        <a href="@Url.Action("RentForm", "Rent", new { equipment_id = equipment.Id })">
+                            <img src="~/image/@equipment.ImageUrl" alt="@equipment.Name">
+                            <h3>@equipment.Name</h3>
+                            <p>@equipment.Price</p>
+                        </a>
+                    </div>
+                }
+            </div>
+        </section>
+    </div>
+
+    <script src="~/js/listings.js"></script>
+</body>

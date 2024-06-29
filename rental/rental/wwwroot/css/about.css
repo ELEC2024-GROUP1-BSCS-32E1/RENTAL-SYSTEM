@@ -1,0 +1,90 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content should take up available space */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar Styles */
+/* ... (existing styles) ... */
+
+/* About Us Page Styles */
+.about {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #FF6347;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.team-member {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align contents horizontally */
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 250px; /* Set a fixed width for consistency */
+    height: 250px; /* Set a fixed height for consistency */
+    border-radius: 50%;
+    object-fit: cover; /* Ensure images maintain aspect ratio without distortion */
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    font-size: 1.25rem;
+    color: #FF6347;
+    margin-top: 1rem;
+}
+
+.team-member p {
+    color: #ccc;
+    margin-top: 0.5rem;
+}
+.footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 2rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+}
