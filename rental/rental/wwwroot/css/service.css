@@ -1,0 +1,97 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content should take up available space */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar Styles */
+/* ... (existing styles) ... */
+
+/* Services Page Styles */
+.services {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #FF6347;
+}
+
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #FF6347;
+    margin-top: 1rem;
+}
+
+.service-card p {
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+.service-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #FF6347;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.service-card a:hover {
+    color: #E55340;
+}
+
+.footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 2rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+}

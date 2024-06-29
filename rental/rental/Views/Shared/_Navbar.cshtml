@@ -1,0 +1,30 @@
+﻿@* Views/Shared/_Navbar.cshtml *@
+@{
+    bool isAuthenticated = TempData.ContainsKey("UserId");
+}
+
+<nav class="navbar">
+    <div class="navbar-container">
+        <a asp-controller="Home" asp-action="Index" class="navbar-logo">PAHIRAM</a>
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a asp-controller="Home" asp-action="Index" class="navbar-link">Home</a></li>
+            @if (!isAuthenticated)
+            {
+                <li class="navbar-item"><a asp-controller="Account" asp-action="Login" class="navbar-link">Login</a></li>
+                <li class="navbar-item"><a asp-controller="Account" asp-action="Register" class="navbar-link">Register</a></li>
+            }
+            else
+            {
+                <li class="navbar-item"><a asp-controller="Listings" asp-action="Index" class="navbar-link">Listings</a></li>
+                <li class="navbar-item"><a asp-controller="Services" asp-action="Index" class="navbar-link">Services</a></li>
+                <li class="navbar-item"><a asp-controller="About" asp-action="Index" class="navbar-link">About Us</a></li>
+                <li class="navbar-item"><a asp-controller="Account" asp-action="Logout" class="navbar-link">Logout</a></li>
+            }
+        </ul>
+        <div class="navbar-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
